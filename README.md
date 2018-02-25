@@ -1,3 +1,3 @@
 # PyDataStructures
 
-This project consist of pythoncode for Datastructures.
+This project consist of python code for Datastructures.
