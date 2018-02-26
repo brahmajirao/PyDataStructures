@@ -144,12 +144,20 @@ class DoubleLinkedList:
                 current_node = current_node.get_next()
                 index += 1
 
-    def print_list(self):
+    def print_list_forward(self):
         node_list = []
         current_node = self.head
-        while current_node != None:
+        while current_node is not None:
             node_list.append(current_node.get_data())
             current_node = current_node.get_next()
+        print(node_list)
+
+    def print_list_backward(self):
+        node_list = []
+        current_node = self.tail
+        while current_node is not None:
+            node_list.append(current_node.get_data())
+            current_node = current_node.get_previous()
         print(node_list)
 
 
@@ -173,4 +181,5 @@ if __name__ == "__main__":
     print(dbl.get_first_value())
     print(dbl.get_last_value())
     print(dbl.get_value_at_position(3))
-    dbl.print_list()
+    dbl.print_list_forward()
+    dbl.print_list_backward()
